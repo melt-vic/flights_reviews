@@ -582,6 +582,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City"/>
+        <rdfs:sameAs>https://dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FBarcelona%2C_Spain&amp;sid=67843</rdfs:sameAs>
     </owl:NamedIndividual>
     
 
