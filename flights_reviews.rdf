@@ -9,6 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews">
         <dc:creator>Víctor Iglesias Castán</dc:creator>
+        <dc:rights>https://creativecommons.org/licenses/by/4.0/</dc:rights>
         <dc:title>Encuestas de satisfacción de los pasajeros de compañías aéreas</dc:title>
     </owl:Ontology>
     
@@ -28,6 +29,12 @@
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
     
 
 
