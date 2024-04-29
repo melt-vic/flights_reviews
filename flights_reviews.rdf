@@ -1,17 +1,15 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/"
      xml:base="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews">
-        <dc:creator>Víctor Iglesias Castán</dc:creator>
-        <dc:rights>https://creativecommons.org/licenses/by/4.0/</dc:rights>
-        <dc:title>Encuestas de satisfacción de los pasajeros de compañías aéreas</dc:title>
-    </owl:Ontology>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:flights_reviews="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews"/>
     
 
 
@@ -23,24 +21,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/rights -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
@@ -74,10 +54,69 @@
     
 
 
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Flight -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Flight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
+        <rdfs:comment>Which flight is reviewed</rdfs:comment>
+        <rdfs:label>Review_flight</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_categorical_rating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_categorical_rating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Correct"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Deficient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Excellent"/>
+        <rdfs:comment>Categorical class which the review overall rating belongs to</rdfs:comment>
+        <rdfs:label>Review_categorical_rating</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type"/>
+        <rdfs:comment>Concepts / aspects reviewed</rdfs:comment>
+        <rdfs:label>Review_review_type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Traveller -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Traveller">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller"/>
+        <rdfs:comment>Traveller who does the review</rdfs:comment>
+        <rdfs:label>Review_traveller</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Traveller_country -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Traveller_country">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country"/>
+        <rdfs:comment>Traveller&apos;s country of origin</rdfs:comment>
+        <rdfs:label>Traveller_country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport"/>
+        <rdfs:comment>Flight&apos;s destination airport</rdfs:comment>
         <rdfs:label>Airlift_dest_airport</rdfs:label>
     </owl:ObjectProperty>
     
@@ -88,16 +127,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City"/>
+        <rdfs:comment>Flight&apos;s destination city</rdfs:comment>
         <rdfs:label>Airlift_dest_city</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
     </owl:ObjectProperty>
     
 
@@ -107,6 +138,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft"/>
+        <rdfs:comment>Aircraft that made the flight</rdfs:comment>
         <rdfs:label>Flight_aircraft</rdfs:label>
     </owl:ObjectProperty>
     
@@ -117,6 +149,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline"/>
+        <rdfs:comment>Which airline operates the flight</rdfs:comment>
         <rdfs:label>Flight_airline</rdfs:label>
     </owl:ObjectProperty>
     
@@ -127,6 +160,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift"/>
+        <rdfs:comment>Which airlift the flight covers</rdfs:comment>
         <rdfs:label>Flight_airlift</rdfs:label>
     </owl:ObjectProperty>
     
@@ -137,6 +171,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller"/>
+        <rdfs:comment>Traveller who was on the flight</rdfs:comment>
         <rdfs:label>Flight_traveller</rdfs:label>
     </owl:ObjectProperty>
     
@@ -145,9 +180,9 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type"/>
+        <rdfs:comment>Which seat type the traveller was sitting on</rdfs:comment>
         <rdfs:label>Flight_seat_type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -158,35 +193,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City"/>
+        <rdfs:comment>Flight&apos;s origin city</rdfs:comment>
         <rdfs:label>Airlift_origin_city</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country"/>
-        <rdfs:label>Traveller_country</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -196,7 +204,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type"/>
-        <rdfs:comment>Traveller_traveller_type</rdfs:comment>
+        <rdfs:comment>Type of travel the traveller was on</rdfs:comment>
+        <rdfs:label>Traveller_traveller_type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -205,15 +214,9 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport"/>
+        <rdfs:comment>Flight&apos;s origin airport</rdfs:comment>
         <rdfs:label>Airlift_origin_airport</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
     </owl:ObjectProperty>
     
 
@@ -237,11 +240,102 @@
     
 
 
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date when the review took place</rdfs:comment>
+        <rdfs:label>Review_date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A description of the aspects that the reviewer considers important to comment on</rdfs:comment>
+        <rdfs:label>Review_description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_overall_rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_overall_rating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Flight&apos;s overall numerical assessment</rdfs:comment>
+        <rdfs:label>Review_overall_rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_recommended -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_recommended">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Would the traveller recommend this flight experience?</rdfs:comment>
+        <rdfs:label>Review_recommended</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_title">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Title given by the traveller to his review</rdfs:comment>
+        <rdfs:label>Review_title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_type_rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_type_rating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Types of aspects that can be reviewed</rdfs:comment>
+        <rdfs:label>Review_type_rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Aircraft&apos;s company maker and model</rdfs:comment>
         <rdfs:label>Aircraft_model</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -252,6 +346,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Airline commercial name</rdfs:comment>
         <rdfs:label>Airline_name</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -260,8 +355,9 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date and time when the flight was scheduled</rdfs:comment>
         <rdfs:label>Flight_date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -272,6 +368,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Seat&apos;s number / ID</rdfs:comment>
+        <rdfs:label>Flight_seat_number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -281,6 +379,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>If is verified that the flight took place and the traveller (the reviewer) was onboard</rdfs:comment>
         <rdfs:label>Flight_verified</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -289,68 +388,10 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The flight&apos;s number</rdfs:comment>
         <rdfs:label>Flight_number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label>Review_date</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>Review_description</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedByte"/>
-        <rdfs:label>Review_overall_rating</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:label>Review_recommended</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>Review_title</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-        <rdfs:label>Review_type_rating</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -360,6 +401,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name that identifies the seat type</rdfs:comment>
         <rdfs:label>Seat_type_name</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -368,8 +410,9 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>An integer that unequivocally identifies the traveller</rdfs:comment>
         <rdfs:label>Traveller_ID</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -380,6 +423,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name that identifies the type of traveller</rdfs:comment>
         <rdfs:label>Traveller_type_name</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -388,8 +432,9 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Airport&apos;s full name</rdfs:comment>
         <rdfs:label>Airport_name</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -414,9 +459,67 @@
     
 
 
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Correct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Correct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#categorical_ratings"/>
+        <rdfs:comment>Rating between 3 and 4</rdfs:comment>
+        <rdfs:label>Correct</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Deficient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Deficient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#categorical_ratings"/>
+        <rdfs:comment>Rating between 1 and 2</rdfs:comment>
+        <rdfs:label>Deficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Excellent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Excellent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#categorical_ratings"/>
+        <rdfs:comment>A rating of 5</rdfs:comment>
+        <rdfs:label>Excellent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Ground -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Ground">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service"/>
+        <rdfs:comment>Services provided by the airline at the airport</rdfs:comment>
+        <rdfs:label>Ground</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#categorical_ratings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#categorical_ratings">
+        <rdfs:comment>Ratings categorized</rdfs:comment>
+        <rdfs:label>Categorical_ratings</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft">
+        <rdfs:comment>Aircraft model</rdfs:comment>
         <rdfs:label>Aircraft</rdfs:label>
     </owl:Class>
     
@@ -425,6 +528,31 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Airlift or aerial bridge between two airports, both of them belong to a city</rdfs:comment>
         <rdfs:label>Airlift</rdfs:label>
     </owl:Class>
     
@@ -433,6 +561,7 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline">
+        <rdfs:comment>Airline operating the flight</rdfs:comment>
         <rdfs:label>Airline</rdfs:label>
     </owl:Class>
     
@@ -441,6 +570,7 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport">
+        <rdfs:comment>Airport. Both for origin and destination</rdfs:comment>
         <rdfs:label>Airport</rdfs:label>
     </owl:Class>
     
@@ -449,6 +579,7 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City">
+        <rdfs:comment>The city to which an airport belongs</rdfs:comment>
         <rdfs:label>City</rdfs:label>
         <rdfs:sameAs>https://dbpedia.org/ontology/City</rdfs:sameAs>
     </owl:Class>
@@ -458,6 +589,7 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country">
+        <rdfs:comment>Traveller&apos;s country of origin</rdfs:comment>
         <rdfs:label>Country</rdfs:label>
         <rdfs:sameAs>https://dbpedia.org/ontology/Country</rdfs:sameAs>
     </owl:Class>
@@ -468,6 +600,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review"/>
+        <rdfs:comment>The entertainment provided during the flight</rdfs:comment>
         <rdfs:label>Entertainment</rdfs:label>
     </owl:Class>
     
@@ -475,7 +608,10 @@
 
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">
+        <rdfs:comment>Flight. Usually referred with a code</rdfs:comment>
+        <rdfs:label>Flight</rdfs:label>
+    </owl:Class>
     
 
 
@@ -483,6 +619,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service"/>
+        <rdfs:comment>Different services which are all strictly related to the flight</rdfs:comment>
         <rdfs:label>Flight_review</rdfs:label>
     </owl:Class>
     
@@ -492,6 +629,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review"/>
+        <rdfs:comment>The quality of the food and beverages provided during the flight</rdfs:comment>
         <rdfs:label>Food_beverage</rdfs:label>
     </owl:Class>
     
@@ -499,13 +637,19 @@
 
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">
+        <rdfs:comment>A traveller&apos;s review of a flight</rdfs:comment>
+        <rdfs:label>Review</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type">
+        <rdfs:comment>Which aspect is being reviewed. Right now this ontology has the aspects &quot;service&quot; and &quot;other&quot;. More aspects can be added in the future</rdfs:comment>
+        <rdfs:label>Review_type</rdfs:label>
+    </owl:Class>
     
 
 
@@ -513,6 +657,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review"/>
+        <rdfs:comment>How comfortable the traveller felt in his/her seat</rdfs:comment>
         <rdfs:label>Seat_comfort</rdfs:label>
     </owl:Class>
     
@@ -521,7 +666,7 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type">
-        <rdfs:label>Seat</rdfs:label>
+        <rdfs:comment>Seat type: Economy, premium, etc</rdfs:comment>
         <rdfs:label>Seat_type</rdfs:label>
     </owl:Class>
     
@@ -531,6 +676,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type"/>
+        <rdfs:comment>One type of review. All the ratings about services are categorized in this type</rdfs:comment>
         <rdfs:label>Service</rdfs:label>
     </owl:Class>
     
@@ -540,19 +686,25 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service"/>
+        <rdfs:comment>Kindness and quality of assistance provided by the flight staff</rdfs:comment>
+        <rdfs:label>Staff</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">
+        <rdfs:comment>The individual who took the flight and assesses it</rdfs:comment>
+        <rdfs:label>Traveller</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type">
+        <rdfs:comment>Type of travel the traveller is on: Family Leisure, Solo Leisure, Couple Leisure, Business</rdfs:comment>
         <rdfs:label>Traveller_type</rdfs:label>
     </owl:Class>
     
@@ -561,7 +713,8 @@
     <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Other"/>
+        <rdfs:comment>The traveller&apos;s rating about the relation between the value obtained and the money invested</rdfs:comment>
         <rdfs:label>Value_for_money</rdfs:label>
     </owl:Class>
     
@@ -571,6 +724,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review"/>
+        <rdfs:comment>Wi-Fi and connectivity quality</rdfs:comment>
         <rdfs:label>Wifi_connectivity</rdfs:label>
     </owl:Class>
     
@@ -587,180 +741,313 @@
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Airlift_BCN_PAR -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Airlift_BCN_PAR">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift"/>
-        <Dest_airport rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle"/>
-        <Dest_city rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris"/>
-        <Origin_city rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona"/>
-        <origin_airport rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat"/>
+        <Dest_airport rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Paris_Charles_de_Gaulle"/>
+        <Dest_city rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Paris"/>
+        <Origin_city rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Barcelona"/>
+        <origin_airport rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Josep_Tarradellas_Barcelona_El_Prat"/>
+        <rdfs:comment>Airlift_BCN_PAR</rdfs:comment>
+        <rdfs:label>Airlift_BCN_PAR</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Barcelona -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Barcelona">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City"/>
+        <rdfs:comment>Barcelona city</rdfs:comment>
+        <rdfs:label>Barcelona</rdfs:label>
         <rdfs:sameAs>https://dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FBarcelona%2C_Spain&amp;sid=67843</rdfs:sameAs>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Bilbao -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Bilbao">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City"/>
+        <rdfs:comment>Bilbao</rdfs:comment>
+        <rdfs:label>Bilbao</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777 -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Boeing777 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Boeing777">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft"/>
+        <rdfs:comment>Boeing777</rdfs:comment>
+        <rdfs:label>Boeing777</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Business -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Business">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type"/>
+        <rdfs:comment>Business</rdfs:comment>
+        <rdfs:label>Business</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Couple_Leisure -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Couple_Leisure">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type"/>
+        <rdfs:comment>Couple_Leisure</rdfs:comment>
+        <rdfs:label>Couple_Leisure</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Economy -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Economy">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type"/>
+        <rdfs:comment>Economy</rdfs:comment>
+        <rdfs:label>Economy</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Entertainment_RYR-1234 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Entertainment_RYR-1234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment"/>
+        <flights_reviews:Review_type_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</flights_reviews:Review_type_rating>
+        <rdfs:comment>Entertainment_RYR-1234</rdfs:comment>
+        <rdfs:label>Entertainment_RYR-1234</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Family_Leisure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Family_Leisure">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type"/>
+        <rdfs:comment>Family_Leisure</rdfs:comment>
+        <rdfs:label>Family_Leisure</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#First_Class -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#First_Class">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type"/>
+        <rdfs:comment>First_Class</rdfs:comment>
+        <rdfs:label>First_Class</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Food_Beverages_RYR-1234 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Food_Beverages_RYR-1234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage"/>
+        <flights_reviews:Review_type_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</flights_reviews:Review_type_rating>
+        <rdfs:comment>Food_Beverages_RYR-1234</rdfs:comment>
+        <rdfs:label>Food_Beverages_RYR-1234</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#France">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country"/>
+        <rdfs:comment>France</rdfs:comment>
+        <rdfs:label>France</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Ground_RYR-1234 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Ground_RYR-1234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Ground"/>
+        <flights_reviews:Review_type_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</flights_reviews:Review_type_rating>
+        <rdfs:comment>Ground_RYR-1234</rdfs:comment>
+        <rdfs:label>Ground_RYR-1234</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Josep_Tarradellas_Barcelona_El_Prat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Josep_Tarradellas_Barcelona_El_Prat">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport"/>
+        <rdfs:comment>Josep_Tarradellas_Barcelona_El_Prat</rdfs:comment>
+        <rdfs:label>Josep_Tarradellas_Barcelona_El_Prat</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Other -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Other">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Other"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Paris">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City"/>
+        <rdfs:comment>Paris</rdfs:comment>
+        <rdfs:label>Paris</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Paris_Charles_de_Gaulle -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Paris_Charles_de_Gaulle">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport"/>
+        <rdfs:comment>Paris_Charles_de_Gaulle</rdfs:comment>
+        <rdfs:label>Paris_Charles_de_Gaulle</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Qatar_Airways -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Qatar_Airways">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline"/>
+        <rdfs:comment>Qatar_Airways</rdfs:comment>
+        <rdfs:label>Qatar_Airways</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234 -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#RYR-1234 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#RYR-1234">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"/>
-        <Flight_aircraft rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777"/>
-        <Flight_airline rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair"/>
-        <Flight_location rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR"/>
-        <Flight_passenger rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan"/>
-        <Flight_seat_type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business"/>
+        <Flight_aircraft rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Boeing777"/>
+        <Flight_airline rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Ryanair"/>
+        <Flight_location rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Airlift_BCN_PAR"/>
+        <Flight_passenger rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Victor_Iglesias_Castan"/>
+        <Flight_seat_type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Business"/>
         <Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-01T12:00:00</Date>
         <Flight_seat_number>23A</Flight_seat_number>
         <Flight_verified rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</Flight_verified>
         <Number>RYR-1234</Number>
+        <rdfs:comment>RYR-1234</rdfs:comment>
+        <rdfs:label>RYR-1234</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review1">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
-        <Review_type_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</Review_type_rating>
+        <flights_reviews:Flight rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#RYR-1234"/>
+        <flights_reviews:Review_type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Value_for_money_RYR-1234"/>
+        <flights_reviews:Traveller rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Victor_Iglesias_Castan"/>
+        <flights_reviews:Review_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-03T12:00:00</flights_reviews:Review_date>
+        <flights_reviews:Review_description>El servicio fue muy bueno, especialmente teniendo en cuenta el bajo importe del vuelo</flights_reviews:Review_description>
+        <flights_reviews:Review_overall_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</flights_reviews:Review_overall_rating>
+        <flights_reviews:Review_recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</flights_reviews:Review_recommended>
+        <flights_reviews:Review_title>Vuelo fantástico</flights_reviews:Review_title>
+        <rdfs:comment>Review from traveller ID=1</rdfs:comment>
+        <rdfs:label>Review1</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Ryanair -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Ryanair">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline"/>
+        <Airline_name>Ryanair</Airline_name>
+        <rdfs:comment>Ryanair</rdfs:comment>
+        <rdfs:label>Ryanair</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Seat_Comfort_RYR-1234 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Seat_Comfort_RYR-1234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort"/>
+        <flights_reviews:Review_type_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</flights_reviews:Review_type_rating>
+        <rdfs:comment>Seat_Comfort_RYR-1234</rdfs:comment>
+        <rdfs:label>Seat_Comfort_RYR-1234</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Solo_Leisure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Solo_Leisure">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type"/>
+        <rdfs:comment>Solo_Leisure</rdfs:comment>
+        <rdfs:label>Solo_Leisure</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Spain -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Spain">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country"/>
+        <rdfs:comment>Spain</rdfs:comment>
+        <rdfs:label>Spain</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan -->
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Staff_RYR-1234 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Staff_RYR-1234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff"/>
+        <flights_reviews:Review_type_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</flights_reviews:Review_type_rating>
+        <rdfs:comment>Staff_RYR-1234</rdfs:comment>
+        <rdfs:label>Staff_RYR-1234</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Value_for_money_RYR-1234 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Value_for_money_RYR-1234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money"/>
+        <flights_reviews:Review_type_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</flights_reviews:Review_type_rating>
+        <rdfs:comment>Value_for_money_RYR-1234</rdfs:comment>
+        <rdfs:label>Value_for_money_RYR-1234</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Victor_Iglesias_Castan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Victor_Iglesias_Castan">
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller"/>
-        <Traveller_country rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain"/>
-        <Traveller_traveller_type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure"/>
-        <Traveller_ID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Traveller_ID>
+        <flights_reviews:Traveller_country rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Spain"/>
+        <Traveller_traveller_type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Family_Leisure"/>
+        <Traveller_ID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</Traveller_ID>
+        <rdfs:comment>Victor_Iglesias_Castan</rdfs:comment>
+        <rdfs:label>Victor_Iglesias_Castan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Wifi_And_Connectivity_RYR-1234 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Wifi_And_Connectivity_RYR-1234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity"/>
+        <flights_reviews:Review_type_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</flights_reviews:Review_type_rating>
+        <rdfs:comment>Wifi_And_Connectivity_RYR-1234</rdfs:comment>
+        <rdfs:label>Wifi_And_Connectivity_RYR-1234</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -773,23 +1060,248 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">
-        <rdfs:label>Flight</rdfs:label>
-        <rdfs:label>Review_flight</rdfs:label>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Other">
+        <rdfs:comment>On type of review</rdfs:comment>
+        <rdfs:label>Other</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">
-        <rdfs:label>Review</rdfs:label>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#review">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type">
-        <rdfs:label>Review_review_type</rdfs:label>
-        <rdfs:label>Review_type</rdfs:label>
+    <rdf:Description rdf:about="urn:swrl:var#rating">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">
-        <rdfs:label>Review_traveller</rdfs:label>
-        <rdfs:label>Traveller</rdfs:label>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#review"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_overall_rating"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#review"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#rating"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#rating"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="urn:swrl:var#rating"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Deficient"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#review"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService">
-        <rdfs:label>ReviewedService</rdfs:label>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#review"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_overall_rating"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#review"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#rating"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#rating"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="urn:swrl:var#rating"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Correct"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#review"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#review"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Review_overall_rating"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#review"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews#Excellent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#review"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
 </rdf:RDF>
 
