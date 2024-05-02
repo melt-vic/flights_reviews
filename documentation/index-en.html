@@ -1,0 +1,2513 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Flight Reviews</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews","name":"Flight Reviews", "headline":"Document describing the ontology http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews", "dateReleased":"Wed May 01 19:23:28 CEST 2024", "license":"http://purl.org/NET/rdflicense/cc-by4.0"}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Flight Reviews</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews">http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews</a></dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"><img src="https://img.shields.io/badge/License-http://purl.org/NET/rdflicense/cc_by4.0-blue.svg" alt="http://purl.org/NET/rdflicense/cc-by4.0" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>swrl</b></td><td>&lt;http://www.w3.org/2003/11/swrl#&gt;</td></tr>
+<tr><td><b>swrlb</b></td><td>&lt;http://www.w3.org/2003/11/swrlb#&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Flight Reviews]: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/Aircraft"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft">Aircraft</a>
+   </li>
+   <li>
+      <a href="#/Airlift"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift">Airlift</a>
+   </li>
+   <li>
+      <a href="#/Airline"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline">Airline</a>
+   </li>
+   <li>
+      <a href="#/Airport"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport">Airport</a>
+   </li>
+   <li>
+      <a href="#/categorical_ratings"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings">Categorical_ratings</a>
+   </li>
+   <li>
+      <a href="#/City"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City">City</a>
+   </li>
+   <li>
+      <a href="#/Correct"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct">Correct</a>
+   </li>
+   <li>
+      <a href="#/Country"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country">Country</a>
+   </li>
+   <li>
+      <a href="#/Deficient"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient">Deficient</a>
+   </li>
+   <li>
+      <a href="#/Entertainment"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment">Entertainment</a>
+   </li>
+   <li>
+      <a href="#/Excellent"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent">Excellent</a>
+   </li>
+   <li>
+      <a href="#/Flight_review"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review">Flight_review</a>
+   </li>
+   <li>
+      <a href="#/Food_beverage"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage">Food_beverage</a>
+   </li>
+   <li>
+      <a href="#/Ground"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground">Ground</a>
+   </li>
+   <li>
+      <a href="#/Other"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other">
+         <span>Other</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Review"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a>
+   </li>
+   <li>
+      <a href="#/Seat_comfort"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort">Seat_comfort</a>
+   </li>
+   <li>
+      <a href="#/Seat_type"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type">Seat_type</a>
+   </li>
+   <li>
+      <a href="#/Service"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service">Service</a>
+   </li>
+   <li>
+      <a href="#/Staff"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff">Staff</a>
+   </li>
+   <li>
+      <a href="#/Traveller_type"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type">Traveller_type</a>
+   </li>
+   <li>
+      <a href="#/Value_for_money"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money">Value_for_money</a>
+   </li>
+   <li>
+      <a href="#/Wifi_connectivity"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity">Wifi_connectivity</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/Dest_airport"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport">Airlift_dest_airport</a>
+   </li>
+   <li>
+      <a href="#/Dest_city"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city">Airlift_dest_city</a>
+   </li>
+   <li>
+      <a href="#/origin_airport"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport">Airlift_origin_airport</a>
+   </li>
+   <li>
+      <a href="#/Origin_city"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city">Airlift_origin_city</a>
+   </li>
+   <li>
+      <a href="#/Flight"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">
+         <span>Flight</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Flight_aircraft"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft">Flight_aircraft</a>
+   </li>
+   <li>
+      <a href="#/Flight_location"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location">Flight_airlift</a>
+   </li>
+   <li>
+      <a href="#/Flight_airline"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline">Flight_airline</a>
+   </li>
+   <li>
+      <a href="#/Flight_seat_type"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type">Flight_seat_type</a>
+   </li>
+   <li>
+      <a href="#/Flight_passenger"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger">Flight_traveller</a>
+   </li>
+   <li>
+      <a href="#/Review_categorical_rating"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating">Review_categorical_rating</a>
+   </li>
+   <li>
+      <a href="#/Review_type"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type">
+         <span>Review_review_type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Traveller"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">
+         <span>Review_traveller</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Traveller_country"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country">Traveller_country</a>
+   </li>
+   <li>
+      <a href="#/Traveller_traveller_type"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type">Traveller_traveller_type</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/Aircraft_model"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model">Aircraft_model</a>
+   </li>
+   <li>
+      <a href="#/Airline_name"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name">Airline_name</a>
+   </li>
+   <li>
+      <a href="#/airport_name"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name">Airport_name</a>
+   </li>
+   <li>
+      <a href="#/Date"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date">Flight_date</a>
+   </li>
+   <li>
+      <a href="#/Number"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number">Flight_number</a>
+   </li>
+   <li>
+      <a href="#/Flight_seat_number"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number">Flight_seat_number</a>
+   </li>
+   <li>
+      <a href="#/Flight_verified"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified">Flight_verified</a>
+   </li>
+   <li>
+      <a href="#/Review_date"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date">Review_date</a>
+   </li>
+   <li>
+      <a href="#/Review_description"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description">Review_description</a>
+   </li>
+   <li>
+      <a href="#/Review_overall_rating"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating">Review_overall_rating</a>
+   </li>
+   <li>
+      <a href="#/Review_recommended"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended">Review_recommended</a>
+   </li>
+   <li>
+      <a href="#/Review_title"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title">Review_title</a>
+   </li>
+   <li>
+      <a href="#/Review_type_rating"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating">Review_type_rating</a>
+   </li>
+   <li>
+      <a href="#/Seat_type_name"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name">Seat_type_name</a>
+   </li>
+   <li>
+      <a href="#/Traveller_ID"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID">Traveller_ID</a>
+   </li>
+   <li>
+      <a href="#/Traveller_type_name"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name">Traveller_type_name</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/reviewedService"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService">
+         <span>reviewed Service</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs">
+         <span>same As</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/Airlift_BCN_PAR"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR">Airlift_BCN_PAR</a>
+   </li>
+   <li>
+      <a href="#/Barcelona"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona">Barcelona</a>
+   </li>
+   <li>
+      <a href="#/Bilbao"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao">Bilbao</a>
+   </li>
+   <li>
+      <a href="#/Boeing777"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777">Boeing777</a>
+   </li>
+   <li>
+      <a href="#/Business"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business">Business</a>
+   </li>
+   <li>
+      <a href="#/Couple_Leisure"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure">Couple_Leisure</a>
+   </li>
+   <li>
+      <a href="#/Economy"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy">Economy</a>
+   </li>
+   <li>
+      <a href="#/Entertainment_RYR-1234"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234">Entertainment_RYR-1234</a>
+   </li>
+   <li>
+      <a href="#/Family_Leisure"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure">Family_Leisure</a>
+   </li>
+   <li>
+      <a href="#/First_Class"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class">First_Class</a>
+   </li>
+   <li>
+      <a href="#/Food_Beverages_RYR-1234"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234">Food_Beverages_RYR-1234</a>
+   </li>
+   <li>
+      <a href="#/France"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France">France</a>
+   </li>
+   <li>
+      <a href="#/Ground_RYR-1234"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234">Ground_RYR-1234</a>
+   </li>
+   <li>
+      <a href="#/Josep_Tarradellas_Barcelona_El_Prat"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat">Josep_Tarradellas_Barcelona_El_Prat</a>
+   </li>
+   <li>
+      <a href="#/Other"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other">
+         <span>Other</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Paris"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris">Paris</a>
+   </li>
+   <li>
+      <a href="#/Paris_Charles_de_Gaulle"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle">Paris_Charles_de_Gaulle</a>
+   </li>
+   <li>
+      <a href="#/Qatar_Airways"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways">Qatar_Airways</a>
+   </li>
+   <li>
+      <a href="#/Review1"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1">Review1</a>
+   </li>
+   <li>
+      <a href="#/Ryanair"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair">Ryanair</a>
+   </li>
+   <li>
+      <a href="#/RYR-1234"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234">RYR-1234</a>
+   </li>
+   <li>
+      <a href="#/Seat_Comfort_RYR-1234"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234">Seat_Comfort_RYR-1234</a>
+   </li>
+   <li>
+      <a href="#/Solo_Leisure"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure">Solo_Leisure</a>
+   </li>
+   <li>
+      <a href="#/Spain"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain">Spain</a>
+   </li>
+   <li>
+      <a href="#/Staff_RYR-1234"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234">Staff_RYR-1234</a>
+   </li>
+   <li>
+      <a href="#/Value_for_money_RYR-1234"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234">Value_for_money_RYR-1234</a>
+   </li>
+   <li>
+      <a href="#/Victor_Iglesias_Castan"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan">Victor_Iglesias_Castan</a>
+   </li>
+   <li>
+      <a href="#/Wifi_And_Connectivity_RYR-1234"
+         title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234">Wifi_And_Connectivity_RYR-1234</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Flight Reviews]: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">Ontology about flights reviews</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Flight Reviews] classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Flight Reviews].
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#/Aircraft" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft">Aircraft</a></li>
+  <li><a href="#/Airlift" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift">Airlift</a></li>
+  <li><a href="#/Airline" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline">Airline</a></li>
+  <li><a href="#/Airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport">Airport</a></li>
+  <li><a href="#/categorical_ratings" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings">Categorical_ratings</a></li>
+  <li><a href="#/City" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City">City</a></li>
+  <li><a href="#/Correct" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct">Correct</a></li>
+  <li><a href="#/Country" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country">Country</a></li>
+  <li><a href="#/Deficient" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient">Deficient</a></li>
+  <li><a href="#/Entertainment" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment">Entertainment</a></li>
+  <li><a href="#/Excellent" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent">Excellent</a></li>
+  <li><a href="#/Flight_review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review">Flight_review</a></li>
+  <li><a href="#/Food_beverage" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage">Food_beverage</a></li>
+  <li><a href="#/Ground" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground">Ground</a></li>
+  <li><a href="#/Other" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other"> <span>Other</span> </a></li>
+  <li><a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a></li>
+  <li><a href="#/Seat_comfort" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort">Seat_comfort</a></li>
+  <li><a href="#/Seat_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type">Seat_type</a></li>
+  <li><a href="#/Service" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service">Service</a></li>
+  <li><a href="#/Staff" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff">Staff</a></li>
+  <li><a href="#/Traveller_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type">Traveller_type</a></li>
+  <li><a href="#/Value_for_money" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money">Value_for_money</a></li>
+  <li><a href="#/Wifi_connectivity" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity">Wifi_connectivity</a></li>
+ </ul>
+ <div class="entity" id="/Aircraft">
+  <h3>Aircraft<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft</p>
+  <div class="comment">
+   <span class="markdown">Aircraft model</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/Aircraft_model" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model">Aircraft_model</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Flight_aircraft" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft">Flight_aircraft</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Boeing777" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777">Boeing777</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Airlift">
+  <h3>Airlift<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift</p>
+  <div class="comment">
+   <span class="markdown">Airlift or aerial bridge between two airports, both of them belong to a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/Dest_airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport">Airlift_dest_airport</a> <sup class="type-op" title="object property">op</sup>, <a href="#/Dest_city" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city">Airlift_dest_city</a> <sup class="type-op" title="object property">op</sup>, <a href="#/origin_airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport">Airlift_origin_airport</a> <sup class="type-op" title="object property">op</sup>, <a href="#/Origin_city" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city">Airlift_origin_city</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Flight_location" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location">Flight_airlift</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Airlift_BCN_PAR" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR">Airlift_BCN_PAR</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Airline">
+  <h3>Airline<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline</p>
+  <div class="comment">
+   <span class="markdown">Airline operating the flight</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/Airline_name" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name">Airline_name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Flight_airline" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline">Flight_airline</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Qatar_Airways" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways">Qatar_Airways</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/Ryanair" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair">Ryanair</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Airport">
+  <h3>Airport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport</p>
+  <div class="comment">
+   <span class="markdown">Airport. Both for origin and destination</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/airport_name" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name">Airport_name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Dest_airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport">Airlift_dest_airport</a> <sup class="type-op" title="object property">op</sup>, <a href="#/origin_airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport">Airlift_origin_airport</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Josep_Tarradellas_Barcelona_El_Prat" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat">Josep_Tarradellas_Barcelona_El_Prat</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/Paris_Charles_de_Gaulle" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle">Paris_Charles_de_Gaulle</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/categorical_ratings">
+  <h3>Categorical_ratings<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings</p>
+  <div class="comment">
+   <span class="markdown">Ratings categorized</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/Correct" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct">Correct</a> <sup class="type-c" title="class">c</sup>, <a href="#/Deficient" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient">Deficient</a> <sup class="type-c" title="class">c</sup>, <a href="#/Excellent" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent">Excellent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/City">
+  <h3>City<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City</p>
+  <div class="comment">
+   <span class="markdown">The city to which an airport belongs</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Dest_city" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city">Airlift_dest_city</a> <sup class="type-op" title="object property">op</sup>, <a href="#/Origin_city" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city">Airlift_origin_city</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Barcelona" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona">Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/Bilbao" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao">Bilbao</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/Paris" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris">Paris</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Correct">
+  <h3>Correct<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct</p>
+  <div class="comment">
+   <span class="markdown">Rating between 3 and 4</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/categorical_ratings" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings">Categorical_ratings</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Review_categorical_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating">Review_categorical_rating</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Country">
+  <h3>Country<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country</p>
+  <div class="comment">
+   <span class="markdown">Traveller's country of origin</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Traveller_country" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country">Traveller_country</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/France" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France">France</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/Spain" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain">Spain</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Deficient">
+  <h3>Deficient<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient</p>
+  <div class="comment">
+   <span class="markdown">Rating between 1 and 2</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/categorical_ratings" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings">Categorical_ratings</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Review_categorical_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating">Review_categorical_rating</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Entertainment">
+  <h3>Entertainment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment</p>
+  <div class="comment">
+   <span class="markdown">The entertainment provided during the flight</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Flight_review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review">Flight_review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="/reviewedService" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService">reviewed Service</a> <sup class="type-ap" title="annotation property">ap</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Entertainment_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234">Entertainment_RYR-1234</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Excellent">
+  <h3>Excellent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent</p>
+  <div class="comment">
+   <span class="markdown">A rating of 5</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/categorical_ratings" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings">Categorical_ratings</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Review_categorical_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating">Review_categorical_rating</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Flight_review">
+  <h3>Flight_review<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review</p>
+  <div class="comment">
+   <span class="markdown">Different services which are all strictly related to the flight</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Service" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service">Service</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/Entertainment" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment">Entertainment</a> <sup class="type-c" title="class">c</sup>, <a href="#/Food_beverage" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage">Food_beverage</a> <sup class="type-c" title="class">c</sup>, <a href="#/Seat_comfort" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort">Seat_comfort</a> <sup class="type-c" title="class">c</sup>, <a href="#/Wifi_connectivity" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity">Wifi_connectivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Food_beverage">
+  <h3>Food_beverage<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage</p>
+  <div class="comment">
+   <span class="markdown">The quality of the food and beverages provided during the flight</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Flight_review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review">Flight_review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="/reviewedService" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService">reviewed Service</a> <sup class="type-ap" title="annotation property">ap</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Food_Beverages_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234">Food_Beverages_RYR-1234</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Ground">
+  <h3>Ground<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground</p>
+  <div class="comment">
+   <span class="markdown">Services provided by the airline at the airport</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Service" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service">Service</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Ground_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234">Ground_RYR-1234</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Other">
+  <h3>Other<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type">Review_review_type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/Value_for_money" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money">Value_for_money</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Other" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other">Other</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#/Other">named individual</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Review">
+  <h3>Review<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review</p>
+  <div class="comment">
+   <span class="markdown">A traveller's review of a flight</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/Flight" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-op" title="object property">op</sup>, <a href="#/Review_categorical_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating">Review_categorical_rating</a> <sup class="type-op" title="object property">op</sup>, <a href="#/Review_date" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date">Review_date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/Review_description" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description">Review_description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/Review_overall_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating">Review_overall_rating</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/Review_recommended" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended">Review_recommended</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/Review_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type">Review_review_type</a> <sup class="type-op" title="object property">op</sup>, <a href="#/Review_title" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title">Review_title</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/Traveller" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">Review_traveller</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Review1" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1">Review1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Seat_comfort">
+  <h3>Seat_comfort<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort</p>
+  <div class="comment">
+   <span class="markdown">How comfortable the traveller felt in his/her seat</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Flight_review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review">Flight_review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="/reviewedService" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService">reviewed Service</a> <sup class="type-ap" title="annotation property">ap</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Seat_Comfort_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234">Seat_Comfort_RYR-1234</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Seat_type">
+  <h3>Seat_type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type</p>
+  <div class="comment">
+   <span class="markdown">Seat type: Economy, premium, etc</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/Seat_type_name" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name">Seat_type_name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Flight_seat_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type">Flight_seat_type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Economy" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy">Economy</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/First_Class" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class">First_Class</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Service">
+  <h3>Service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service</p>
+  <div class="comment">
+   <span class="markdown">One type of review. All the ratings about services are categorized in this type</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type">Review_review_type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/Flight_review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review">Flight_review</a> <sup class="type-c" title="class">c</sup>, <a href="#/Ground" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground">Ground</a> <sup class="type-c" title="class">c</sup>, <a href="#/Staff" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff">Staff</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="/reviewedService" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService">reviewed Service</a> <sup class="type-ap" title="annotation property">ap</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Staff">
+  <h3>Staff<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff</p>
+  <div class="comment">
+   <span class="markdown">Kindness and quality of assistance provided by the flight staff</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Service" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service">Service</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="/reviewedService" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService">reviewed Service</a> <sup class="type-ap" title="annotation property">ap</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Staff_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234">Staff_RYR-1234</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Traveller_type">
+  <h3>Traveller_type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type</p>
+  <div class="comment">
+   <span class="markdown">Type of travel the traveller is on: Family Leisure, Solo Leisure, Couple Leisure, Business</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/Traveller_type_name" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name">Traveller_type_name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/Traveller_traveller_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type">Traveller_traveller_type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Business" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business">Business</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/Couple_Leisure" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure">Couple_Leisure</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/Family_Leisure" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure">Family_Leisure</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/Solo_Leisure" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure">Solo_Leisure</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Value_for_money">
+  <h3>Value_for_money<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money</p>
+  <div class="comment">
+   <span class="markdown">The traveller's rating about the relation between the value obtained and the money invested</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Other" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other">Other</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Value_for_money_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234">Value_for_money_RYR-1234</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Wifi_connectivity">
+  <h3>Wifi_connectivity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity</p>
+  <div class="comment">
+   <span class="markdown">Wi-Fi and connectivity quality</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Flight_review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review">Flight_review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="/reviewedService" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService">reviewed Service</a> <sup class="type-ap" title="annotation property">ap</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Wifi_And_Connectivity_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234">Wifi_And_Connectivity_RYR-1234</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#/Dest_airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport">Airlift_dest_airport</a></li>
+  <li><a href="#/Dest_city" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city">Airlift_dest_city</a></li>
+  <li><a href="#/origin_airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport">Airlift_origin_airport</a></li>
+  <li><a href="#/Origin_city" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city">Airlift_origin_city</a></li>
+  <li><a href="#/Flight" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight"> <span>Flight</span> </a></li>
+  <li><a href="#/Flight_aircraft" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft">Flight_aircraft</a></li>
+  <li><a href="#/Flight_location" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location">Flight_airlift</a></li>
+  <li><a href="#/Flight_airline" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline">Flight_airline</a></li>
+  <li><a href="#/Flight_seat_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type">Flight_seat_type</a></li>
+  <li><a href="#/Flight_passenger" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger">Flight_traveller</a></li>
+  <li><a href="#/Review_categorical_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating">Review_categorical_rating</a></li>
+  <li><a href="#/Review_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type"> <span>Review_review_type</span> </a></li>
+  <li><a href="#/Traveller" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller"> <span>Review_traveller</span> </a></li>
+  <li><a href="#/Traveller_country" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country">Traveller_country</a></li>
+  <li><a href="#/Traveller_traveller_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type">Traveller_traveller_type</a></li>
+ </ul>
+ <div class="entity" id="/Dest_airport">
+  <h3>Airlift_dest_airport<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport</p>
+  <div class="comment">
+   <span class="markdown">Flight's destination airport</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Airlift" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift">Airlift</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport">Airport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Dest_city">
+  <h3>Airlift_dest_city<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city</p>
+  <div class="comment">
+   <span class="markdown">Flight's destination city</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Airlift" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift">Airlift</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/origin_airport">
+  <h3>Airlift_origin_airport<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport</p>
+  <div class="comment">
+   <span class="markdown">Flight's origin airport</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Airlift" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift">Airlift</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport">Airport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Origin_city">
+  <h3>Airlift_origin_city<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city</p>
+  <div class="comment">
+   <span class="markdown">Flight's origin city</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Airlift" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift">Airlift</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Flight">
+  <h3>Flight<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     class
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Flight_aircraft">
+  <h3>Flight_aircraft<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft</p>
+  <div class="comment">
+   <span class="markdown">Aircraft that made the flight</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Aircraft" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Flight_location">
+  <h3>Flight_airlift<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location</p>
+  <div class="comment">
+   <span class="markdown">Which airlift the flight covers</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Airlift" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift">Airlift</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Flight_airline">
+  <h3>Flight_airline<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline</p>
+  <div class="comment">
+   <span class="markdown">Which airline operates the flight</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Airline" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline">Airline</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Flight_seat_type">
+  <h3>Flight_seat_type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type</p>
+  <div class="comment">
+   <span class="markdown">Which seat type the traveller was sitting on</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Seat_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type">Seat_type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Flight_passenger">
+  <h3>Flight_traveller<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger</p>
+  <div class="comment">
+   <span class="markdown">Traveller who was on the flight</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">Review_traveller</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Review_categorical_rating">
+  <h3>Review_categorical_rating<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating</p>
+  <div class="comment">
+   <span class="markdown">Categorical class which the review overall rating belongs to</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Correct" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct">Correct</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Deficient" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient">Deficient</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Excellent" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent">Excellent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Review_type">
+  <h3>Review_review_type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type">Review_review_type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     class
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Traveller">
+  <h3>Review_traveller<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">Review_traveller</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     class
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Traveller_country">
+  <h3>Traveller_country<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country</p>
+  <div class="comment">
+   <span class="markdown">Traveller's country of origin</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">Review_traveller</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Country" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country">Country</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Traveller_traveller_type">
+  <h3>Traveller_traveller_type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type</p>
+  <div class="comment">
+   <span class="markdown">Type of travel the traveller was on</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">Review_traveller</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Traveller_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type">Traveller_type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#/Aircraft_model" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model">Aircraft_model</a></li>
+  <li><a href="#/Airline_name" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name">Airline_name</a></li>
+  <li><a href="#/airport_name" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name">Airport_name</a></li>
+  <li><a href="#/Date" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date">Flight_date</a></li>
+  <li><a href="#/Number" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number">Flight_number</a></li>
+  <li><a href="#/Flight_seat_number" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number">Flight_seat_number</a></li>
+  <li><a href="#/Flight_verified" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified">Flight_verified</a></li>
+  <li><a href="#/Review_date" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date">Review_date</a></li>
+  <li><a href="#/Review_description" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description">Review_description</a></li>
+  <li><a href="#/Review_overall_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating">Review_overall_rating</a></li>
+  <li><a href="#/Review_recommended" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended">Review_recommended</a></li>
+  <li><a href="#/Review_title" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title">Review_title</a></li>
+  <li><a href="#/Review_type_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating">Review_type_rating</a></li>
+  <li><a href="#/Seat_type_name" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name">Seat_type_name</a></li>
+  <li><a href="#/Traveller_ID" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID">Traveller_ID</a></li>
+  <li><a href="#/Traveller_type_name" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name">Traveller_type_name</a></li>
+ </ul>
+ <div class="entity" id="/Aircraft_model">
+  <h3>Aircraft_model<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model</p>
+  <div class="comment">
+   <span class="markdown">Aircraft's company maker and model</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Aircraft" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Airline_name">
+  <h3>Airline_name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name</p>
+  <div class="comment">
+   <span class="markdown">Airline commercial name</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Airline" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline">Airline</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/airport_name">
+  <h3>Airport_name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name</p>
+  <div class="comment">
+   <span class="markdown">Airport's full name</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport">Airport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Date">
+  <h3>Flight_date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date</p>
+  <div class="comment">
+   <span class="markdown">Date and time when the flight was scheduled</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Number">
+  <h3>Flight_number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number</p>
+  <div class="comment">
+   <span class="markdown">The flight's number</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Flight_seat_number">
+  <h3>Flight_seat_number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number</p>
+  <div class="comment">
+   <span class="markdown">Seat's number / ID</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Flight_verified">
+  <h3>Flight_verified<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified</p>
+  <div class="comment">
+   <span class="markdown">If is verified that the flight took place and the traveller (the reviewer) was onboard</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Review_date">
+  <h3>Review_date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date</p>
+  <div class="comment">
+   <span class="markdown">Date when the review took place</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Review_description">
+  <h3>Review_description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description</p>
+  <div class="comment">
+   <span class="markdown">A description of the aspects that the reviewer considers important to comment on</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Review_overall_rating">
+  <h3>Review_overall_rating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating</p>
+  <div class="comment">
+   <span class="markdown">Flight's overall numerical assessment</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd></dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Review_recommended">
+  <h3>Review_recommended<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended</p>
+  <div class="comment">
+   <span class="markdown">Would the traveller recommend this flight experience?</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Review_title">
+  <h3>Review_title<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title</p>
+  <div class="comment">
+   <span class="markdown">Title given by the traveller to his review</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Review_type_rating">
+  <h3>Review_type_rating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating</p>
+  <div class="comment">
+   <span class="markdown">Types of aspects that can be reviewed</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type">Review_review_type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd></dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Seat_type_name">
+  <h3>Seat_type_name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name</p>
+  <div class="comment">
+   <span class="markdown">The name that identifies the seat type</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Seat_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type">Seat_type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Traveller_ID">
+  <h3>Traveller_ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID</p>
+  <div class="comment">
+   <span class="markdown">An integer that unequivocally identifies the traveller</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">Review_traveller</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/Traveller_type_name">
+  <h3>Traveller_type_name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name</p>
+  <div class="comment">
+   <span class="markdown">The name that identifies the type of traveller</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Traveller_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type">Traveller_type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#/reviewedService" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService"> <span>reviewed Service</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs"> <span>same As</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="/reviewedService">
+  <h3>reviewed Service<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Entertainment" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment">Entertainment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Food_beverage" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage">Food_beverage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Seat_comfort" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort">Seat_comfort</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Service" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service">Service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Staff" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff">Staff</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Wifi_connectivity" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity">Wifi_connectivity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#sameAs">
+  <h3>same As<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#sameAs</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#/Airlift_BCN_PAR" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR">Airlift_BCN_PAR</a></li>
+  <li><a href="#/Barcelona" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona">Barcelona</a></li>
+  <li><a href="#/Bilbao" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao">Bilbao</a></li>
+  <li><a href="#/Boeing777" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777">Boeing777</a></li>
+  <li><a href="#/Business" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business">Business</a></li>
+  <li><a href="#/Couple_Leisure" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure">Couple_Leisure</a></li>
+  <li><a href="#/Economy" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy">Economy</a></li>
+  <li><a href="#/Entertainment_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234">Entertainment_RYR-1234</a></li>
+  <li><a href="#/Family_Leisure" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure">Family_Leisure</a></li>
+  <li><a href="#/First_Class" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class">First_Class</a></li>
+  <li><a href="#/Food_Beverages_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234">Food_Beverages_RYR-1234</a></li>
+  <li><a href="#/France" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France">France</a></li>
+  <li><a href="#/Ground_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234">Ground_RYR-1234</a></li>
+  <li><a href="#/Josep_Tarradellas_Barcelona_El_Prat" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat">Josep_Tarradellas_Barcelona_El_Prat</a></li>
+  <li><a href="#/Other" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other"> <span>Other</span> </a></li>
+  <li><a href="#/Paris" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris">Paris</a></li>
+  <li><a href="#/Paris_Charles_de_Gaulle" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle">Paris_Charles_de_Gaulle</a></li>
+  <li><a href="#/Qatar_Airways" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways">Qatar_Airways</a></li>
+  <li><a href="#/Review1" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1">Review1</a></li>
+  <li><a href="#/Ryanair" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair">Ryanair</a></li>
+  <li><a href="#/RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234">RYR-1234</a></li>
+  <li><a href="#/Seat_Comfort_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234">Seat_Comfort_RYR-1234</a></li>
+  <li><a href="#/Solo_Leisure" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure">Solo_Leisure</a></li>
+  <li><a href="#/Spain" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain">Spain</a></li>
+  <li><a href="#/Staff_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234">Staff_RYR-1234</a></li>
+  <li><a href="#/Value_for_money_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234">Value_for_money_RYR-1234</a></li>
+  <li><a href="#/Victor_Iglesias_Castan" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan">Victor_Iglesias_Castan</a></li>
+  <li><a href="#/Wifi_And_Connectivity_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234">Wifi_And_Connectivity_RYR-1234</a></li>
+ </ul>
+ <div class="entity" id="/Airlift_BCN_PAR">
+  <h3>Airlift_BCN_PAR<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR</p>
+  <div class="comment">
+   <span class="markdown">Airlift_BCN_PAR</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Airlift" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift">Airlift</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Dest_airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport">Airlift_dest_airport</a> <sup class="type-op" title="object property">op</sup> <a href="#/Paris_Charles_de_Gaulle" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle">Paris_Charles_de_Gaulle</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Dest_city" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city">Airlift_dest_city</a> <sup class="type-op" title="object property">op</sup> <a href="#/Paris" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris">Paris</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Origin_city" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city">Airlift_origin_city</a> <sup class="type-op" title="object property">op</sup> <a href="#/Barcelona" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona">Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/origin_airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport">Airlift_origin_airport</a> <sup class="type-op" title="object property">op</sup> <a href="#/Josep_Tarradellas_Barcelona_El_Prat" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat">Josep_Tarradellas_Barcelona_El_Prat</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Barcelona">
+  <h3>Barcelona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona</p>
+  <div class="comment">
+   <span class="markdown">Barcelona city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/City" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Bilbao">
+  <h3>Bilbao<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao</p>
+  <div class="comment">
+   <span class="markdown">Bilbao</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/City" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Boeing777">
+  <h3>Boeing777<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777</p>
+  <div class="comment">
+   <span class="markdown">Boeing777</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Aircraft" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Business">
+  <h3>Business<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business</p>
+  <div class="comment">
+   <span class="markdown">Business</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Traveller_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type">Traveller_type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Couple_Leisure">
+  <h3>Couple_Leisure<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure</p>
+  <div class="comment">
+   <span class="markdown">Couple_Leisure</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Traveller_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type">Traveller_type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Economy">
+  <h3>Economy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy</p>
+  <div class="comment">
+   <span class="markdown">Economy</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Seat_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type">Seat_type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Entertainment_RYR-1234">
+  <h3>Entertainment_RYR-1234<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234</p>
+  <div class="comment">
+   <span class="markdown">Entertainment_RYR-1234</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Entertainment" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment">Entertainment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Review_type_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating">Review_type_rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Family_Leisure">
+  <h3>Family_Leisure<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure</p>
+  <div class="comment">
+   <span class="markdown">Family_Leisure</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Traveller_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type">Traveller_type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/First_Class">
+  <h3>First_Class<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class</p>
+  <div class="comment">
+   <span class="markdown">First_Class</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Seat_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type">Seat_type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Food_Beverages_RYR-1234">
+  <h3>Food_Beverages_RYR-1234<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234</p>
+  <div class="comment">
+   <span class="markdown">Food_Beverages_RYR-1234</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Food_beverage" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage">Food_beverage</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Review_type_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating">Review_type_rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2"^^<a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/France">
+  <h3>France<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France</p>
+  <div class="comment">
+   <span class="markdown">France</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Country" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country">Country</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Ground_RYR-1234">
+  <h3>Ground_RYR-1234<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234</p>
+  <div class="comment">
+   <span class="markdown">Ground_RYR-1234</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Ground" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground">Ground</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Review_type_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating">Review_type_rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2"^^<a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Josep_Tarradellas_Barcelona_El_Prat">
+  <h3>Josep_Tarradellas_Barcelona_El_Prat<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat</p>
+  <div class="comment">
+   <span class="markdown">Josep_Tarradellas_Barcelona_El_Prat</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport">Airport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Other">
+  <h3>Other<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Other" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other">Other</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#/Other">class</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Paris">
+  <h3>Paris<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris</p>
+  <div class="comment">
+   <span class="markdown">Paris</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/City" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Paris_Charles_de_Gaulle">
+  <h3>Paris_Charles_de_Gaulle<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle</p>
+  <div class="comment">
+   <span class="markdown">Paris_Charles_de_Gaulle</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Airport" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport">Airport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Qatar_Airways">
+  <h3>Qatar_Airways<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways</p>
+  <div class="comment">
+   <span class="markdown">Qatar_Airways</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Airline" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline">Airline</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Review1">
+  <h3>Review1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1</p>
+  <div class="comment">
+   <span class="markdown">Review from traveller ID=1</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Review" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Flight" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-op" title="object property">op</sup> <a href="#/RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234">RYR-1234</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Review_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type">Review_review_type</a> <sup class="type-op" title="object property">op</sup> <a href="#/Value_for_money_RYR-1234" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234">Value_for_money_RYR-1234</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Traveller" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">Review_traveller</a> <sup class="type-op" title="object property">op</sup> <a href="#/Victor_Iglesias_Castan" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan">Victor_Iglesias_Castan</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Review_date" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date">Review_date</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-04-03T12:00:00"^^<a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> </span>
+   </dd>
+   <dd>
+    <a href="#/Review_description" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description">Review_description</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"El servicio fue muy bueno, especialmente teniendo en cuenta el bajo importe del vuelo"</span>
+   </dd>
+   <dd>
+    <a href="#/Review_overall_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating">Review_overall_rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#/Review_recommended" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended">Review_recommended</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#/Review_title" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title">Review_title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Vuelo fantástico"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Ryanair">
+  <h3>Ryanair<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair</p>
+  <div class="comment">
+   <span class="markdown">Ryanair</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Airline" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline">Airline</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Airline_name" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name">Airline_name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ryanair"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/RYR-1234">
+  <h3>RYR-1234<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234</p>
+  <div class="comment">
+   <span class="markdown">RYR-1234</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">Flight</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Flight_aircraft" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft">Flight_aircraft</a> <sup class="type-op" title="object property">op</sup> <a href="#/Boeing777" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777">Boeing777</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Flight_airline" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline">Flight_airline</a> <sup class="type-op" title="object property">op</sup> <a href="#/Ryanair" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair">Ryanair</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Flight_location" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location">Flight_airlift</a> <sup class="type-op" title="object property">op</sup> <a href="#/Airlift_BCN_PAR" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR">Airlift_BCN_PAR</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Flight_passenger" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger">Flight_traveller</a> <sup class="type-op" title="object property">op</sup> <a href="#/Victor_Iglesias_Castan" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan">Victor_Iglesias_Castan</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Flight_seat_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type">Flight_seat_type</a> <sup class="type-op" title="object property">op</sup> <a href="#/Business" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business">Business</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Date" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date">Flight_date</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-04-01T12:00:00"^^<a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> </span>
+   </dd>
+   <dd>
+    <a href="#/Flight_seat_number" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number">Flight_seat_number</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"23A"</span>
+   </dd>
+   <dd>
+    <a href="#/Flight_verified" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified">Flight_verified</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#/Number" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number">Flight_number</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"RYR-1234"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Seat_Comfort_RYR-1234">
+  <h3>Seat_Comfort_RYR-1234<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234</p>
+  <div class="comment">
+   <span class="markdown">Seat_Comfort_RYR-1234</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Seat_comfort" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort">Seat_comfort</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Review_type_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating">Review_type_rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Solo_Leisure">
+  <h3>Solo_Leisure<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure</p>
+  <div class="comment">
+   <span class="markdown">Solo_Leisure</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Traveller_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type">Traveller_type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Spain">
+  <h3>Spain<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain</p>
+  <div class="comment">
+   <span class="markdown">Spain</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Country" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country">Country</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Staff_RYR-1234">
+  <h3>Staff_RYR-1234<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234</p>
+  <div class="comment">
+   <span class="markdown">Staff_RYR-1234</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Staff" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff">Staff</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Review_type_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating">Review_type_rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Value_for_money_RYR-1234">
+  <h3>Value_for_money_RYR-1234<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234</p>
+  <div class="comment">
+   <span class="markdown">Value_for_money_RYR-1234</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Value_for_money" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money">Value_for_money</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Review_type_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating">Review_type_rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Victor_Iglesias_Castan">
+  <h3>Victor_Iglesias_Castan<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan</p>
+  <div class="comment">
+   <span class="markdown">Victor_Iglesias_Castan</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller" target="_blank" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller">Review_traveller</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Traveller_country" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country">Traveller_country</a> <sup class="type-op" title="object property">op</sup> <a href="#/Spain" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain">Spain</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Traveller_traveller_type" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type">Traveller_traveller_type</a> <sup class="type-op" title="object property">op</sup> <a href="#/Family_Leisure" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure">Family_Leisure</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/Traveller_ID" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID">Traveller_ID</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Wifi_And_Connectivity_RYR-1234">
+  <h3>Wifi_And_Connectivity_RYR-1234<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234</p>
+  <div class="comment">
+   <span class="markdown">Wifi_And_Connectivity_RYR-1234</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Wifi_connectivity" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity">Wifi_connectivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/Review_type_rating" title="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating">Review_type_rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#positiveInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive Integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

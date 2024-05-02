@@ -1,0 +1,1584 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews" ],
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "comments" : {
+      "undefined" : "Ontology about flights reviews"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://purl.org/NET/rdflicense/cc-by4.0",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Deficient",
+      "undefined" : "Deficient"
+    },
+    "comment" : {
+      "undefined" : "Rating between 1 and 2"
+    },
+    "attributes" : [ "external" ],
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Excellent",
+      "undefined" : "Excellent"
+    },
+    "comment" : {
+      "undefined" : "A rating of 5"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ground",
+      "undefined" : "Ground"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Ground_RYR-1234"
+      },
+      "labels" : {
+        "IRI-based" : "Ground_RYR-1234",
+        "undefined" : "Ground_RYR-1234"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Services provided by the airline at the airport"
+    },
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Airport",
+      "undefined" : "Airport"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Paris_Charles_de_Gaulle"
+      },
+      "labels" : {
+        "IRI-based" : "Paris_Charles_de_Gaulle",
+        "undefined" : "Paris_Charles_de_Gaulle"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Josep_Tarradellas_Barcelona_El_Prat"
+      },
+      "labels" : {
+        "IRI-based" : "Josep_Tarradellas_Barcelona_El_Prat",
+        "undefined" : "Josep_Tarradellas_Barcelona_El_Prat"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Airport. Both for origin and destination"
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Correct",
+      "undefined" : "Correct"
+    },
+    "comment" : {
+      "undefined" : "Rating between 3 and 4"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Airline",
+      "undefined" : "Airline"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Ryanair"
+      },
+      "labels" : {
+        "IRI-based" : "Ryanair",
+        "undefined" : "Ryanair"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Qatar_Airways"
+      },
+      "labels" : {
+        "IRI-based" : "Qatar_Airways",
+        "undefined" : "Qatar_Airways"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Airline operating the flight"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "0", "5", "14" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Seat_type",
+      "undefined" : "Seat_type"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Economy"
+      },
+      "labels" : {
+        "IRI-based" : "Economy",
+        "undefined" : "Economy"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "First_Class"
+      },
+      "labels" : {
+        "IRI-based" : "First_Class",
+        "undefined" : "First_Class"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Seat type: Economy, premium, etc"
+    },
+    "attributes" : [ "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Value_for_money",
+      "undefined" : "Value_for_money"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Value_for_money_RYR-1234"
+      },
+      "labels" : {
+        "IRI-based" : "Value_for_money_RYR-1234",
+        "undefined" : "Value_for_money_RYR-1234"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The traveller's rating about the relation between the value obtained and the money invested"
+    },
+    "attributes" : [ "external" ],
+    "id" : "28",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/ontology/Country",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Country",
+      "undefined" : "Country"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "France"
+      },
+      "labels" : {
+        "IRI-based" : "France",
+        "undefined" : "France"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Spain"
+      },
+      "labels" : {
+        "IRI-based" : "Spain",
+        "undefined" : "Spain"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Traveller's country of origin"
+    },
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Food_beverage",
+      "undefined" : "Food_beverage"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Food_Beverages_RYR-1234"
+      },
+      "labels" : {
+        "IRI-based" : "Food_Beverages_RYR-1234",
+        "undefined" : "Food_Beverages_RYR-1234"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The quality of the food and beverages provided during the flight"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Airlift",
+      "undefined" : "Airlift"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Airlift_BCN_PAR"
+      },
+      "labels" : {
+        "IRI-based" : "Airlift_BCN_PAR",
+        "undefined" : "Airlift_BCN_PAR"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Airlift or aerial bridge between two airports, both of them belong to a city"
+    },
+    "attributes" : [ "external" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "positiveInteger"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entertainment",
+      "undefined" : "Entertainment"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Entertainment_RYR-1234"
+      },
+      "labels" : {
+        "IRI-based" : "Entertainment_RYR-1234",
+        "undefined" : "Entertainment_RYR-1234"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The entertainment provided during the flight"
+    },
+    "attributes" : [ "external" ],
+    "id" : "49",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Traveller_type",
+      "undefined" : "Traveller_type"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Couple_Leisure"
+      },
+      "labels" : {
+        "IRI-based" : "Couple_Leisure",
+        "undefined" : "Couple_Leisure"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Business"
+      },
+      "labels" : {
+        "IRI-based" : "Business",
+        "undefined" : "Business"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Solo_Leisure"
+      },
+      "labels" : {
+        "IRI-based" : "Solo_Leisure",
+        "undefined" : "Solo_Leisure"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Family_Leisure"
+      },
+      "labels" : {
+        "IRI-based" : "Family_Leisure",
+        "undefined" : "Family_Leisure"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Type of travel the traveller is on: Family Leisure, Solo Leisure, Couple Leisure, Business"
+    },
+    "attributes" : [ "external" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Seat_comfort",
+      "undefined" : "Seat_comfort"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Seat_Comfort_RYR-1234"
+      },
+      "labels" : {
+        "IRI-based" : "Seat_Comfort_RYR-1234",
+        "undefined" : "Seat_Comfort_RYR-1234"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "How comfortable the traveller felt in his/her seat"
+    },
+    "attributes" : [ "external" ],
+    "id" : "57",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Review",
+      "undefined" : "Review"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Review from traveller ID=1"
+      },
+      "labels" : {
+        "IRI-based" : "Review1",
+        "undefined" : "Review1"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A traveller's review of a flight"
+    },
+    "attributes" : [ "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "Other",
+      "undefined" : "Other"
+    },
+    "subClasses" : [ "28" ],
+    "comment" : {
+      "undefined" : "On type of review"
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Wifi_connectivity",
+      "undefined" : "Wifi_connectivity"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Wifi_And_Connectivity_RYR-1234"
+      },
+      "labels" : {
+        "IRI-based" : "Wifi_And_Connectivity_RYR-1234",
+        "undefined" : "Wifi_And_Connectivity_RYR-1234"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Wi-Fi and connectivity quality"
+    },
+    "attributes" : [ "external" ],
+    "id" : "71",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "categorical_ratings",
+      "undefined" : "Categorical_ratings"
+    },
+    "subClasses" : [ "0", "5", "14" ],
+    "comment" : {
+      "undefined" : "Ratings categorized"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Aircraft",
+      "undefined" : "Aircraft"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Boeing777"
+      },
+      "labels" : {
+        "IRI-based" : "Boeing777",
+        "undefined" : "Boeing777"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Aircraft model"
+    },
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "https://dbpedia.org/ontology/City",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "undefined" : "City"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Bilbao"
+      },
+      "labels" : {
+        "IRI-based" : "Bilbao",
+        "undefined" : "Bilbao"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Paris"
+      },
+      "labels" : {
+        "IRI-based" : "Paris",
+        "undefined" : "Paris"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "annotations" : {
+        "sameAs" : [ {
+          "identifier" : "sameAs",
+          "language" : "undefined",
+          "value" : "https://dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FBarcelona%2C_Spain&sid=67843",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Barcelona city"
+      },
+      "labels" : {
+        "IRI-based" : "Barcelona",
+        "undefined" : "Barcelona"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The city to which an airport belongs"
+    },
+    "attributes" : [ "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Staff",
+      "undefined" : "Staff"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234",
+      "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+      "comment" : {
+        "undefined" : "Staff_RYR-1234"
+      },
+      "labels" : {
+        "IRI-based" : "Staff_RYR-1234",
+        "undefined" : "Staff_RYR-1234"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Kindness and quality of assistance provided by the flight staff"
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Service",
+      "undefined" : "Service"
+    },
+    "subClasses" : [ "4", "9", "13" ],
+    "comment" : {
+      "undefined" : "One type of review. All the ratings about services are categorized in this type"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Flight_review",
+      "undefined" : "Flight_review"
+    },
+    "subClasses" : [ "3", "57", "49", "71" ],
+    "comment" : {
+      "undefined" : "Different services which are all strictly related to the flight"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "10" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "58",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "Review_type_rating",
+      "undefined" : "Review_type_rating"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Types of aspects that can be reviewed"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "6"
+  }, {
+    "range" : "10",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "Flight_aircraft",
+      "undefined" : "Flight_aircraft"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Aircraft that made the flight"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "16"
+  }, {
+    "range" : "1",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "range" : "10",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "Traveller",
+      "undefined" : "Traveller"
+    },
+    "domain" : "23",
+    "comment" : {
+      "undefined" : "The individual who took the flight and assesses it"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "22"
+  }, {
+    "range" : "1",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "range" : "29",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "Review_description",
+      "undefined" : "Review_description"
+    },
+    "domain" : "23",
+    "comment" : {
+      "undefined" : "A description of the aspects that the reviewer considers important to comment on"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "Traveller_ID",
+      "undefined" : "Traveller_ID"
+    },
+    "domain" : "22",
+    "comment" : {
+      "undefined" : "An integer that unequivocally identifies the traveller"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "Date",
+      "undefined" : "Flight_date"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Date and time when the flight was scheduled"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "Traveller_country",
+      "undefined" : "Traveller_country"
+    },
+    "domain" : "22",
+    "comment" : {
+      "undefined" : "Traveller's country of origin"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "Review_title",
+      "undefined" : "Review_title"
+    },
+    "domain" : "23",
+    "comment" : {
+      "undefined" : "Title given by the traveller to his review"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "airport_name",
+      "undefined" : "Airport_name"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "Airport's full name"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "42"
+  }, {
+    "domain" : "29",
+    "range" : "29",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "18",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "Traveller_type_name",
+      "undefined" : "Traveller_type_name"
+    },
+    "domain" : "51",
+    "comment" : {
+      "undefined" : "The name that identifies the type of traveller"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "Review_overall_rating",
+      "undefined" : "Review_overall_rating"
+    },
+    "domain" : "23",
+    "comment" : {
+      "undefined" : "Flight's overall numerical assessment"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "origin_airport",
+      "undefined" : "Airlift_origin_airport"
+    },
+    "domain" : "45",
+    "comment" : {
+      "undefined" : "Flight's origin airport"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "origin_airport",
+      "undefined" : "Airlift_origin_airport"
+    },
+    "domain" : "45",
+    "comment" : {
+      "undefined" : "Flight's origin airport"
+    },
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "Dest_airport",
+      "undefined" : "Airlift_dest_airport"
+    },
+    "domain" : "45",
+    "comment" : {
+      "undefined" : "Flight's destination airport"
+    },
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "Origin_city",
+      "undefined" : "Airlift_origin_city"
+    },
+    "domain" : "45",
+    "comment" : {
+      "undefined" : "Flight's origin city"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "Flight_passenger",
+      "undefined" : "Flight_traveller"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Traveller who was on the flight"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "Flight_seat_type",
+      "undefined" : "Flight_seat_type"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Which seat type the traveller was sitting on"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "Dest_city",
+      "undefined" : "Airlift_dest_city"
+    },
+    "domain" : "45",
+    "comment" : {
+      "undefined" : "Flight's destination city"
+    },
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "Flight_location",
+      "undefined" : "Flight_airlift"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Which airlift the flight covers"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "Origin_city",
+      "undefined" : "Airlift_origin_city"
+    },
+    "domain" : "45",
+    "comment" : {
+      "undefined" : "Flight's origin city"
+    },
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "Aircraft_model",
+      "undefined" : "Aircraft_model"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Aircraft's company maker and model"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "Dest_airport",
+      "undefined" : "Airlift_dest_airport"
+    },
+    "domain" : "45",
+    "comment" : {
+      "undefined" : "Flight's destination airport"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "Traveller_traveller_type",
+      "undefined" : "Traveller_traveller_type"
+    },
+    "domain" : "22",
+    "comment" : {
+      "undefined" : "Type of travel the traveller was on"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "Flight_airline",
+      "undefined" : "Flight_airline"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Which airline operates the flight"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "Review_date",
+      "undefined" : "Review_date"
+    },
+    "domain" : "23",
+    "comment" : {
+      "undefined" : "Date when the review took place"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "Number",
+      "undefined" : "Flight_number"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "The flight's number"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "Flight",
+      "undefined" : "Flight"
+    },
+    "domain" : "23",
+    "comment" : {
+      "undefined" : "Which flight is reviewed"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "11",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "Review_type",
+      "undefined" : "Review_type"
+    },
+    "domain" : "23",
+    "comment" : {
+      "undefined" : "Which aspect is being reviewed. Right now this ontology has the aspects \"service\" and \"other\". More aspects can be added in the future"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "Review_categorical_rating",
+      "undefined" : "Review_categorical_rating"
+    },
+    "domain" : "23",
+    "comment" : {
+      "undefined" : "Categorical class which the review overall rating belongs to"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "Flight_verified",
+      "undefined" : "Flight_verified"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "If is verified that the flight took place and the traveller (the reviewer) was onboard"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "Seat_type_name",
+      "undefined" : "Seat_type_name"
+    },
+    "domain" : "33",
+    "comment" : {
+      "undefined" : "The name that identifies the seat type"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "Dest_city",
+      "undefined" : "Airlift_dest_city"
+    },
+    "domain" : "45",
+    "comment" : {
+      "undefined" : "Flight's destination city"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "82"
+  }, {
+    "range" : "4",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "83"
+  }, {
+    "range" : "4",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "Flight_seat_number",
+      "undefined" : "Flight_seat_number"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Seat's number / ID"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "Review_recommended",
+      "undefined" : "Review_recommended"
+    },
+    "domain" : "23",
+    "comment" : {
+      "undefined" : "Would the traveller recommend this flight experience?"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name",
+    "baseIri" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "Airline_name",
+      "undefined" : "Airline_name"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Airline commercial name"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "87"
+  }, {
+    "range" : "4",
+    "domain" : "71",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  } ]
+}
