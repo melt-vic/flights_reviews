@@ -1,0 +1,684 @@
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews> <http://purl.org/dc/terms/license> "http://purl.org/NET/rdflicense/cc-by4.0" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology about flights reviews" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport> <http://www.w3.org/2000/01/rdf-schema#comment> "Flight's destination airport" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport> <http://www.w3.org/2000/01/rdf-schema#label> "Airlift_dest_airport" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city> <http://www.w3.org/2000/01/rdf-schema#comment> "Flight's destination city" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city> <http://www.w3.org/2000/01/rdf-schema#label> "Airlift_dest_city" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft> <http://www.w3.org/2000/01/rdf-schema#comment> "Aircraft that made the flight" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft> <http://www.w3.org/2000/01/rdf-schema#label> "Flight_aircraft" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline> <http://www.w3.org/2000/01/rdf-schema#comment> "Which airline operates the flight" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline> <http://www.w3.org/2000/01/rdf-schema#label> "Flight_airline" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location> <http://www.w3.org/2000/01/rdf-schema#comment> "Which airlift the flight covers" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location> <http://www.w3.org/2000/01/rdf-schema#label> "Flight_airlift" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger> <http://www.w3.org/2000/01/rdf-schema#comment> "Traveller who was on the flight" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger> <http://www.w3.org/2000/01/rdf-schema#label> "Flight_traveller" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type> <http://www.w3.org/2000/01/rdf-schema#comment> "Which seat type the traveller was sitting on" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type> <http://www.w3.org/2000/01/rdf-schema#label> "Flight_seat_type" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city> <http://www.w3.org/2000/01/rdf-schema#comment> "Flight's origin city" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city> <http://www.w3.org/2000/01/rdf-schema#label> "Airlift_origin_city" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating> <http://www.w3.org/2000/01/rdf-schema#comment> "Categorical class which the review overall rating belongs to" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating> <http://www.w3.org/2000/01/rdf-schema#label> "Review_categorical_rating" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country> <http://www.w3.org/2000/01/rdf-schema#comment> "Traveller's country of origin" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country> <http://www.w3.org/2000/01/rdf-schema#label> "Traveller_country" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of travel the traveller was on" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type> <http://www.w3.org/2000/01/rdf-schema#label> "Traveller_traveller_type" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport> <http://www.w3.org/2000/01/rdf-schema#comment> "Flight's origin airport" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport> <http://www.w3.org/2000/01/rdf-schema#label> "Airlift_origin_airport" .
+# 
+# http://www.w3.org/2002/07/owl#topObjectProperty
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model> <http://www.w3.org/2000/01/rdf-schema#comment> "Aircraft's company maker and model" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model> <http://www.w3.org/2000/01/rdf-schema#label> "Aircraft_model" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name> <http://www.w3.org/2000/01/rdf-schema#comment> "Airline commercial name" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name> <http://www.w3.org/2000/01/rdf-schema#label> "Airline_name" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date> <http://www.w3.org/2000/01/rdf-schema#comment> "Date and time when the flight was scheduled" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date> <http://www.w3.org/2000/01/rdf-schema#label> "Flight_date" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number> <http://www.w3.org/2000/01/rdf-schema#comment> "Seat's number / ID" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number> <http://www.w3.org/2000/01/rdf-schema#label> "Flight_seat_number" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified> <http://www.w3.org/2000/01/rdf-schema#comment> "If is verified that the flight took place and the traveller (the reviewer) was onboard" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified> <http://www.w3.org/2000/01/rdf-schema#label> "Flight_verified" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number> <http://www.w3.org/2000/01/rdf-schema#comment> "The flight's number" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number> <http://www.w3.org/2000/01/rdf-schema#label> "Flight_number" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the review took place" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date> <http://www.w3.org/2000/01/rdf-schema#label> "Review_date" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of the aspects that the reviewer considers important to comment on" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description> <http://www.w3.org/2000/01/rdf-schema#label> "Review_description" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2001/XMLSchema#minInclusive> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating> <http://www.w3.org/2000/01/rdf-schema#comment> "Flight's overall numerical assessment" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating> <http://www.w3.org/2000/01/rdf-schema#label> "Review_overall_rating" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended> <http://www.w3.org/2000/01/rdf-schema#comment> "Would the traveller recommend this flight experience?" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended> <http://www.w3.org/2000/01/rdf-schema#label> "Review_recommended" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title> <http://www.w3.org/2000/01/rdf-schema#comment> "Title given by the traveller to his review" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title> <http://www.w3.org/2000/01/rdf-schema#label> "Review_title" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> <http://www.w3.org/2000/01/rdf-schema#range> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2001/XMLSchema#minInclusive> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> <http://www.w3.org/2000/01/rdf-schema#comment> "Types of aspects that can be reviewed" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> <http://www.w3.org/2000/01/rdf-schema#label> "Review_type_rating" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name that identifies the seat type" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name> <http://www.w3.org/2000/01/rdf-schema#label> "Seat_type_name" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID> <http://www.w3.org/2000/01/rdf-schema#comment> "An integer that unequivocally identifies the traveller" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID> <http://www.w3.org/2000/01/rdf-schema#label> "Traveller_ID" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name that identifies the type of traveller" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name> <http://www.w3.org/2000/01/rdf-schema#label> "Traveller_type_name" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name> <http://www.w3.org/2000/01/rdf-schema#comment> "Airport's full name" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name> <http://www.w3.org/2000/01/rdf-schema#label> "Airport_name" .
+# 
+# http://www.w3.org/2002/07/owl#topDataProperty
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft> <http://www.w3.org/2000/01/rdf-schema#comment> "Aircraft model" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft> <http://www.w3.org/2000/01/rdf-schema#label> "Aircraft" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> <http://www.w3.org/2000/01/rdf-schema#comment> "Airlift or aerial bridge between two airports, both of them belong to a city" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> <http://www.w3.org/2000/01/rdf-schema#label> "Airlift" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline> <http://www.w3.org/2000/01/rdf-schema#comment> "Airline operating the flight" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline> <http://www.w3.org/2000/01/rdf-schema#label> "Airline" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> <http://www.w3.org/2000/01/rdf-schema#comment> "Airport. Both for origin and destination" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> <http://www.w3.org/2000/01/rdf-schema#label> "Airport" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> <http://www.w3.org/2000/01/rdf-schema#comment> "The city to which an airport belongs" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/City" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct> <http://www.w3.org/2000/01/rdf-schema#comment> "Rating between 3 and 4" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct> <http://www.w3.org/2000/01/rdf-schema#label> "Correct" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country> <http://www.w3.org/2000/01/rdf-schema#comment> "Traveller's country of origin" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/Country" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient> <http://www.w3.org/2000/01/rdf-schema#comment> "Rating between 1 and 2" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient> <http://www.w3.org/2000/01/rdf-schema#label> "Deficient" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment> <http://www.w3.org/2000/01/rdf-schema#comment> "The entertainment provided during the flight" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment> <http://www.w3.org/2000/01/rdf-schema#label> "Entertainment" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating of 5" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent> <http://www.w3.org/2000/01/rdf-schema#label> "Excellent" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review> <http://www.w3.org/2000/01/rdf-schema#comment> "Different services which are all strictly related to the flight" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review> <http://www.w3.org/2000/01/rdf-schema#label> "Flight_review" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage> <http://www.w3.org/2000/01/rdf-schema#comment> "The quality of the food and beverages provided during the flight" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage> <http://www.w3.org/2000/01/rdf-schema#label> "Food_beverage" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground> <http://www.w3.org/2000/01/rdf-schema#comment> "Services provided by the airline at the airport" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground> <http://www.w3.org/2000/01/rdf-schema#label> "Ground" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> <http://www.w3.org/2000/01/rdf-schema#comment> "A traveller's review of a flight" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> <http://www.w3.org/2000/01/rdf-schema#label> "Review" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort> <http://www.w3.org/2000/01/rdf-schema#comment> "How comfortable the traveller felt in his/her seat" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort> <http://www.w3.org/2000/01/rdf-schema#label> "Seat_comfort" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type> <http://www.w3.org/2000/01/rdf-schema#comment> "Seat type: Economy, premium, etc" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type> <http://www.w3.org/2000/01/rdf-schema#label> "Seat_type" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service> <http://www.w3.org/2000/01/rdf-schema#comment> "One type of review. All the ratings about services are categorized in this type" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff> <http://www.w3.org/2000/01/rdf-schema#comment> "Kindness and quality of assistance provided by the flight staff" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff> <http://www.w3.org/2000/01/rdf-schema#label> "Staff" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of travel the traveller is on: Family Leisure, Solo Leisure, Couple Leisure, Business" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type> <http://www.w3.org/2000/01/rdf-schema#label> "Traveller_type" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money> <http://www.w3.org/2000/01/rdf-schema#comment> "The traveller's rating about the relation between the value obtained and the money invested" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money> <http://www.w3.org/2000/01/rdf-schema#label> "Value_for_money" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Wi-Fi and connectivity quality" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity> <http://www.w3.org/2000/01/rdf-schema#label> "Wifi_connectivity" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings> <http://www.w3.org/2000/01/rdf-schema#comment> "Ratings categorized" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings> <http://www.w3.org/2000/01/rdf-schema#label> "Categorical_ratings" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR> <http://www.w3.org/2000/01/rdf-schema#comment> "Airlift_BCN_PAR" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR> <http://www.w3.org/2000/01/rdf-schema#label> "Airlift_BCN_PAR" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona> <http://www.w3.org/2000/01/rdf-schema#comment> "Barcelona city" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona> <http://www.w3.org/2000/01/rdf-schema#label> "Barcelona" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Barcelona> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FBarcelona%2C_Spain&sid=67843" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao> <http://www.w3.org/2000/01/rdf-schema#comment> "Bilbao" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Bilbao> <http://www.w3.org/2000/01/rdf-schema#label> "Bilbao" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777> <http://www.w3.org/2000/01/rdf-schema#comment> "Boeing777" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777> <http://www.w3.org/2000/01/rdf-schema#label> "Boeing777" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business> <http://www.w3.org/2000/01/rdf-schema#comment> "Business" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business> <http://www.w3.org/2000/01/rdf-schema#label> "Business" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Couple_Leisure" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Couple_Leisure> <http://www.w3.org/2000/01/rdf-schema#label> "Couple_Leisure" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy> <http://www.w3.org/2000/01/rdf-schema#comment> "Economy" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Economy> <http://www.w3.org/2000/01/rdf-schema#label> "Economy" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> "4"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#comment> "Entertainment_RYR-1234" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#label> "Entertainment_RYR-1234" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Family_Leisure" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure> <http://www.w3.org/2000/01/rdf-schema#label> "Family_Leisure" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class> <http://www.w3.org/2000/01/rdf-schema#comment> "First_Class" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/First_Class> <http://www.w3.org/2000/01/rdf-schema#label> "First_Class" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> "2"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#comment> "Food_Beverages_RYR-1234" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_Beverages_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#label> "Food_Beverages_RYR-1234" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France> <http://www.w3.org/2000/01/rdf-schema#comment> "France" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/France> <http://www.w3.org/2000/01/rdf-schema#label> "France" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> "2"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#comment> "Ground_RYR-1234" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#label> "Ground_RYR-1234" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat> <http://www.w3.org/2000/01/rdf-schema#comment> "Josep_Tarradellas_Barcelona_El_Prat" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Josep_Tarradellas_Barcelona_El_Prat> <http://www.w3.org/2000/01/rdf-schema#label> "Josep_Tarradellas_Barcelona_El_Prat" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other> .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris> <http://www.w3.org/2000/01/rdf-schema#comment> "Paris" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris> <http://www.w3.org/2000/01/rdf-schema#label> "Paris" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle> <http://www.w3.org/2000/01/rdf-schema#comment> "Paris_Charles_de_Gaulle" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Paris_Charles_de_Gaulle> <http://www.w3.org/2000/01/rdf-schema#label> "Paris_Charles_de_Gaulle" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways> <http://www.w3.org/2000/01/rdf-schema#comment> "Qatar_Airways" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Qatar_Airways> <http://www.w3.org/2000/01/rdf-schema#label> "Qatar_Airways" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Boeing777> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift_BCN_PAR> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Business> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date> "2024-04-01T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number> "23A" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number> "RYR-1234" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.w3.org/2000/01/rdf-schema#comment> "RYR-1234" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> <http://www.w3.org/2000/01/rdf-schema#label> "RYR-1234" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/RYR-1234> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date> "2024-04-03T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description> "El servicio fue muy bueno, especialmente teniendo en cuenta el bajo importe del vuelo" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title> "Vuelo fantástico" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.w3.org/2000/01/rdf-schema#comment> "Review from traveller ID=1" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review1> <http://www.w3.org/2000/01/rdf-schema#label> "Review1" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name> "Ryanair" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair> <http://www.w3.org/2000/01/rdf-schema#comment> "Ryanair" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ryanair> <http://www.w3.org/2000/01/rdf-schema#label> "Ryanair" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> "1"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#comment> "Seat_Comfort_RYR-1234" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_Comfort_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#label> "Seat_Comfort_RYR-1234" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Solo_Leisure" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Solo_Leisure> <http://www.w3.org/2000/01/rdf-schema#label> "Solo_Leisure" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain> <http://www.w3.org/2000/01/rdf-schema#comment> "Spain" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain> <http://www.w3.org/2000/01/rdf-schema#label> "Spain" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> "3"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#comment> "Staff_RYR-1234" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#label> "Staff_RYR-1234" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> "4"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#comment> "Value_for_money_RYR-1234" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#label> "Value_for_money_RYR-1234" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Spain> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Family_Leisure> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan> <http://www.w3.org/2000/01/rdf-schema#comment> "Victor_Iglesias_Castan" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Victor_Iglesias_Castan> <http://www.w3.org/2000/01/rdf-schema#label> "Victor_Iglesias_Castan" .
+# 
+# http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234> <http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating> "5"^^<http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#comment> "Wifi_And_Connectivity_RYR-1234" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_And_Connectivity_RYR-1234> <http://www.w3.org/2000/01/rdf-schema#label> "Wifi_And_Connectivity_RYR-1234" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> <http://www.w3.org/2000/01/rdf-schema#comment> "Flight. Usually referred with a code" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> <http://www.w3.org/2000/01/rdf-schema#comment> "Which flight is reviewed" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> <http://www.w3.org/2000/01/rdf-schema#label> "Flight" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight> <http://www.w3.org/2000/01/rdf-schema#label> "Review_flight" .
+# 
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other> <http://www.w3.org/2000/01/rdf-schema#comment> "On type of review" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other> <http://www.w3.org/2000/01/rdf-schema#label> "Other" .
+# 
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concepts / aspects reviewed" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> <http://www.w3.org/2000/01/rdf-schema#comment> "Which aspect is being reviewed. Right now this ontology has the aspects \"service\" and \"other\". More aspects can be added in the future" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> <http://www.w3.org/2000/01/rdf-schema#label> "Review_review_type" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type> <http://www.w3.org/2000/01/rdf-schema#label> "Review_type" .
+# 
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> <http://www.w3.org/2000/01/rdf-schema#comment> "The individual who took the flight and assesses it" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> <http://www.w3.org/2000/01/rdf-schema#comment> "Traveller who does the review" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> <http://www.w3.org/2000/01/rdf-schema#label> "Review_traveller" .
+<http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller> <http://www.w3.org/2000/01/rdf-schema#label> "Traveller" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
