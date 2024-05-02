@@ -1,0 +1,19 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "flights_reviews:Excellent" "flights_reviews:Service" "flights_reviews:Deficient" "flights_reviews:Wifi_connectivity" "flights_reviews:Seat_comfort" "flights_reviews:categorical_ratings" "flights_reviews:Correct" "flights_reviews:Staff" "flights_reviews:Flight_review" "flights_reviews:Other" "flights_reviews:Ground" "flights_reviews:Entertainment" "flights_reviews:Value_for_money" "flights_reviews:Review_type" "flights_reviews:Food_beverage" ; /*classes style*/
+	"flights_reviews:Entertainment" -> "flights_reviews:Flight_review" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Service" -> "flights_reviews:Review_type" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Excellent" -> "flights_reviews:categorical_ratings" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Correct" -> "flights_reviews:categorical_ratings" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Value_for_money" -> "flights_reviews:Other" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Ground" -> "flights_reviews:Service" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Wifi_connectivity" -> "flights_reviews:Flight_review" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Staff" -> "flights_reviews:Service" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Other" -> "flights_reviews:Review_type" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Flight_review" -> "flights_reviews:Service" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Food_beverage" -> "flights_reviews:Flight_review" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Deficient" -> "flights_reviews:categorical_ratings" [ label = "rdfs:subClassOf" ];
+	"flights_reviews:Seat_comfort" -> "flights_reviews:Flight_review" [ label = "rdfs:subClassOf" ];
+
+}

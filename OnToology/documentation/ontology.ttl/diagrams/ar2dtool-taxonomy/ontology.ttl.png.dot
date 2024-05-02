@@ -1,0 +1,19 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; ":Excellent" ":Service" ":Deficient" ":Wifi_connectivity" ":Seat_comfort" ":categorical_ratings" ":Correct" ":Staff" ":Flight_review" ":Other" ":Ground" ":Entertainment" ":Value_for_money" ":Review_type" ":Food_beverage" ; /*classes style*/
+	":Entertainment" -> ":Flight_review" [ label = "rdfs:subClassOf" ];
+	":Service" -> ":Review_type" [ label = "rdfs:subClassOf" ];
+	":Excellent" -> ":categorical_ratings" [ label = "rdfs:subClassOf" ];
+	":Correct" -> ":categorical_ratings" [ label = "rdfs:subClassOf" ];
+	":Value_for_money" -> ":Other" [ label = "rdfs:subClassOf" ];
+	":Ground" -> ":Service" [ label = "rdfs:subClassOf" ];
+	":Wifi_connectivity" -> ":Flight_review" [ label = "rdfs:subClassOf" ];
+	":Staff" -> ":Service" [ label = "rdfs:subClassOf" ];
+	":Other" -> ":Review_type" [ label = "rdfs:subClassOf" ];
+	":Flight_review" -> ":Service" [ label = "rdfs:subClassOf" ];
+	":Food_beverage" -> ":Flight_review" [ label = "rdfs:subClassOf" ];
+	":Deficient" -> ":categorical_ratings" [ label = "rdfs:subClassOf" ];
+	":Seat_comfort" -> ":Flight_review" [ label = "rdfs:subClassOf" ];
+
+}
