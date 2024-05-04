@@ -1,0 +1,19 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:Excellent" "base:Service" "base:Deficient" "base:Wifi_connectivity" "base:Seat_comfort" "base:categorical_ratings" "base:Correct" "base:Staff" "base:Flight_review" "base:Other" "base:Ground" "base:Entertainment" "base:Value_for_money" "base:Review_type" "base:Food_beverage" ; /*classes style*/
+	"base:Entertainment" -> "base:Flight_review" [ label = "rdfs:subClassOf" ];
+	"base:Service" -> "base:Review_type" [ label = "rdfs:subClassOf" ];
+	"base:Excellent" -> "base:categorical_ratings" [ label = "rdfs:subClassOf" ];
+	"base:Correct" -> "base:categorical_ratings" [ label = "rdfs:subClassOf" ];
+	"base:Value_for_money" -> "base:Other" [ label = "rdfs:subClassOf" ];
+	"base:Ground" -> "base:Service" [ label = "rdfs:subClassOf" ];
+	"base:Wifi_connectivity" -> "base:Flight_review" [ label = "rdfs:subClassOf" ];
+	"base:Staff" -> "base:Service" [ label = "rdfs:subClassOf" ];
+	"base:Other" -> "base:Review_type" [ label = "rdfs:subClassOf" ];
+	"base:Flight_review" -> "base:Service" [ label = "rdfs:subClassOf" ];
+	"base:Food_beverage" -> "base:Flight_review" [ label = "rdfs:subClassOf" ];
+	"base:Deficient" -> "base:categorical_ratings" [ label = "rdfs:subClassOf" ];
+	"base:Seat_comfort" -> "base:Flight_review" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,210 @@
+{
+  "@context" : {
+    "Dest_airport" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_airport",
+      "@type" : "@id"
+    },
+    "categorical_ratings" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/categorical_ratings"
+    },
+    "Entertainment" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Entertainment"
+    },
+    "Review" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"
+    },
+    "Flight_airline" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_airline",
+      "@type" : "@id"
+    },
+    "Aircraft_model" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft_model",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Review_type" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "airport_name" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/airport_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Correct" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Correct"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country"
+    },
+    "Flight_passenger" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_passenger",
+      "@type" : "@id"
+    },
+    "reviewedService" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/reviewedService"
+    },
+    "Dest_city" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Dest_city",
+      "@type" : "@id"
+    },
+    "Review_categorical_rating" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_categorical_rating",
+      "@type" : "@id"
+    },
+    "Ground" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Ground"
+    },
+    "Review_overall_rating" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_overall_rating"
+    },
+    "Number" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Number",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Airlift" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airlift"
+    },
+    "Traveller_traveller_type" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_traveller_type",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Flight_verified" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_verified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Food_beverage" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Food_beverage"
+    },
+    "Traveller_type" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type"
+    },
+    "Wifi_connectivity" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Wifi_connectivity"
+    },
+    "Airline_name" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Airport" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport"
+    },
+    "Date" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Excellent" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Excellent"
+    },
+    "Traveller" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller",
+      "@type" : "@id"
+    },
+    "Seat_type" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type"
+    },
+    "Review_date" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "origin_airport" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/origin_airport",
+      "@type" : "@id"
+    },
+    "Traveller_ID" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_ID",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "Flight_review" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_review"
+    },
+    "Review_type_rating" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_type_rating"
+    },
+    "Traveller_country" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_country",
+      "@type" : "@id"
+    },
+    "Traveller_type_name" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Traveller_type_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Aircraft"
+    },
+    "Staff" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Staff"
+    },
+    "Review_recommended" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_recommended",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Airline" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airline"
+    },
+    "Flight" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight",
+      "@type" : "@id"
+    },
+    "Review_description" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Flight_aircraft" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_aircraft",
+      "@type" : "@id"
+    },
+    "Flight_seat_type" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_type",
+      "@type" : "@id"
+    },
+    "City" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/City"
+    },
+    "Flight_location" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_location",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Review_title" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review_title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Service" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Service"
+    },
+    "Other" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other"
+    },
+    "Deficient" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Deficient"
+    },
+    "Seat_type_name" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_type_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Seat_comfort" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Seat_comfort"
+    },
+    "Origin_city" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Origin_city",
+      "@type" : "@id"
+    },
+    "Flight_seat_number" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight_seat_number",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Value_for_money" : {
+      "@id" : "http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Value_for_money"
+    }
+  }
+}
