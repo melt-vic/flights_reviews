@@ -224,14 +224,6 @@
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Review"/>
-    </rdf:Description>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -440,14 +432,6 @@
         <rdfs:comment>Airport&apos;s full name</rdfs:comment>
         <rdfs:label>Airport_name</rdfs:label>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Airport"/>
-    </rdf:Description>
     
 
 
@@ -858,6 +842,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Country"/>
         <rdfs:comment>France</rdfs:comment>
         <rdfs:label>France</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/describe/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FFrance</rdfs:sameAs>
     </owl:NamedIndividual>
     
 
@@ -1057,7 +1042,6 @@
     <rdf:Description rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Flight">
         <rdfs:comment>Flight. Usually referred with a code</rdfs:comment>
         <rdfs:comment>Which flight is reviewed</rdfs:comment>
-        <rdfs:label>Flight</rdfs:label>
         <rdfs:label>Review_flight</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/vic/ontologies/2024/3/flights_reviews/Other">
